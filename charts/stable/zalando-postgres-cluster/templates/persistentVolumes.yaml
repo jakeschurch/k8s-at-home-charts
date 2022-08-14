@@ -23,19 +23,5 @@ spec:
     storage: "{{ $.Values.postgresql.volume.size }}"
   accessModes:
     {{- $.Values.persistentVolumes.accessModes | toYaml | nindent 4 }}
-  hostPath:
-    path: {{ include "zalando-postgres-cluster.localPath" $ }}
   #Since it is created directly this does not delete it from cluster
-  persistentVolumeReclaimPolicy: "{{ $.Values.persistentVolumes.reclaimPolicy }}"
-
-  {{- $e := index $.Values.persistentVolumes.replicaNodes $i }}
-  nodeAffinity:
-    required:
-      nodeSelectorTerms:
-      - matchExpressions:
-        - key: kubernetes.io/hostname
-          operator: In
-          values:
-          - {{ $e }}
-
 {{ end }}

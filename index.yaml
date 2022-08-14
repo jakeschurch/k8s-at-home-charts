@@ -7,14 +7,14 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-08-14T17:36:28.735553754-04:00"
+    created: "2022-08-14T17:57:47.241954174-04:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
       version: 4.5.2
     description: Creates a postgres cluster using the Zalando Postgres operator and
       local storage
-    digest: 843582050c9be72ae6cd3411cd3a9b1160fd8290f07d643c7845dd8d81c7ca1d
+    digest: 94c7e5654828b00fc5f2c1cec4a1add27f669d5e0571821898d85b02ca50c4a1
     home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/zalando-postgres-cluster
     icon: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png
     keywords:
@@ -30,4 +30,4 @@ entries:
     urls:
     - https://jakeschurch.github.io/k8s-at-home-charts/zalando-postgres-cluster-3.4.3.tgz
     version: 3.4.3
-generated: "2022-08-14T17:36:28.73250177-04:00"
+generated: "2022-08-14T17:57:47.238707705-04:00"
