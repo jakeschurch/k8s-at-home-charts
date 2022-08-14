@@ -7,7 +7,36 @@ entries:
           description: Upgraded `common` chart dependency to version 4.5.2
     apiVersion: v2
     appVersion: 1.0.0
-    created: "2022-08-14T17:57:47.241954174-04:00"
+    created: "2022-08-14T18:03:11.834408175-04:00"
+    dependencies:
+    - name: common
+      repository: https://library-charts.k8s-at-home.com
+      version: 4.5.2
+    description: Creates a postgres cluster using the Zalando Postgres operator and
+      local storage
+    digest: e0cb9a1e4943d9b83c16291ced8ab5bb21949a5d4bd2e88a368456ffee22d85d
+    home: https://github.com/k8s-at-home/charts/tree/master/charts/stable/zalando-postgres-cluster
+    icon: https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Postgresql_elephant.svg/1200px-Postgresql_elephant.svg.png
+    keywords:
+    - postgres
+    - operator
+    - zalando
+    maintainers:
+    - email: git@angelnu.com
+      name: angelnu
+    name: zalando-postgres-cluster
+    sources:
+    - https://github.com/zalando/postgres-operator
+    urls:
+    - https://jakeschurch.github.io/k8s-at-home-charts/zalando-postgres-cluster-3.4.4.tgz
+    version: 3.4.4
+  - annotations:
+      artifacthub.io/changes: |-
+        - kind: changed
+          description: Upgraded `common` chart dependency to version 4.5.2
+    apiVersion: v2
+    appVersion: 1.0.0
+    created: "2022-08-14T18:03:11.831014235-04:00"
     dependencies:
     - name: common
       repository: https://library-charts.k8s-at-home.com
@@ -30,4 +59,4 @@ entries:
     urls:
     - https://jakeschurch.github.io/k8s-at-home-charts/zalando-postgres-cluster-3.4.3.tgz
     version: 3.4.3
-generated: "2022-08-14T17:57:47.238707705-04:00"
+generated: "2022-08-14T18:03:11.828065446-04:00"
