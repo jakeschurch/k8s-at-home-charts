@@ -2,7 +2,7 @@
 {{- range $i:= untilStep 0 (len $.Values.persistentVolumes.replicaNodes) 1 -}}
 ---
 apiVersion: v1
-kind: PersistentVolume
+kind: PersistentVolumeClaim
 metadata:
   name: {{ include "zalando-postgres-cluster.pvName" $ }}-{{ $i }}
   labels:
@@ -18,10 +18,9 @@ metadata:
     - kubernetes.io/pv-protection
 spec:
   storageClassName: {{ include "zalando-postgres-cluster.storageClass" $ }}
-  volumeMode: Filesystem
-  capacity:
-    storage: "{{ $.Values.postgresql.volume.size }}"
+  resources:
+    requests:
+      storage: "{{ $.Values.postgresql.volume.size }}"
   accessModes:
-    {{- $.Values.persistentVolumes.accessModes | toYaml | nindent 4 }}
-  #Since it is created directly this does not delete it from cluster
+  - ReadWriteOnce
 {{ end }}

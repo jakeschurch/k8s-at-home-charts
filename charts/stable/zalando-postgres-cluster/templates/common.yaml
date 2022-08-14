@@ -24,11 +24,6 @@
 {{- define "zalando-postgres-cluster.pvName" -}}
 {{- include "common.names.fullname" .|lower -}}
 {{- end -}}
-
-{{- define "zalando-postgres-cluster.localPath" -}}
-{{- default (printf "%s/%s" .Values.persistentVolumes.hostPathPrefix (include "common.names.fullname" .)) .Values.persistentVolumes.hostPath -}}
-{{- end -}}
-
 {{- define "zalando-postgres-cluster.backupPVCSubpath" -}}
 {{- default (printf "%s/%s" .Values.dumpBackup.subpathPrefix (include "common.names.fullname" .)) .Values.dumpBackup.subpath -}}
 {{- end -}}
